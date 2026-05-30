@@ -65,16 +65,16 @@ install(FILES include/pm.h
     DESTINATION include
 )
 
-# Optional: Create test executables
-option(BUILD_TESTS "Build test programs" OFF)
+# Optional: Create example executables
+option(BUILD_TESTS "Build example programs" OFF)
 
 if(BUILD_TESTS)
-    add_executable(test_pm_adc test/test_pm_adc.c)
+    add_executable(test_pm_adc example/test_pm_adc.c)
     target_link_libraries(test_pm_adc pm)
     set_target_properties(test_pm_adc PROPERTIES BUILD_RPATH "$ORIGIN/../lib")
     install(TARGETS test_pm_adc RUNTIME DESTINATION bin)
 
-    add_executable(test_pm_generic test/test_pm_generic.c)
+    add_executable(test_pm_generic example/test_pm_generic.c)
     target_link_libraries(test_pm_generic pm)
     set_target_properties(test_pm_generic PROPERTIES BUILD_RPATH "$ORIGIN/../lib")
     install(TARGETS test_pm_generic RUNTIME DESTINATION bin)

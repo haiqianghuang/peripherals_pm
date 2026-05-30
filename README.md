@@ -20,7 +20,7 @@ cmake --build build
 ```
 
 ### 运行示例
-默认节点名来自 `test/test_pm_generic.c`：
+默认节点名来自 `example/test_pm_generic.c`：
 ```bash
 ./build/test_pm_generic
 ```
